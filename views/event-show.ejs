@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+<div class="ui main text container segment">
+	<div class="ui huge header"><%= event.name %></div>
+	<div class="ui items">
+		<div class="item">
+			<div class="middle aligned content">
+			    <div class="">
+			        <%= event.host %>
+			    </div>
+			    <!-- <br> -->
+			    <div class="">
+			        <%= event.prize %>
+			    </div>
+		    </div>
+		</div>
+	</div>
+	<a class="ui basic button" href="/events/<%= event.id %>/edit" >Edit Event</a>
+	<form id="delete-form" action="/events/<%= event.id %>?_method=DELETE" method="POST">
+		<input type="submit" name="delete" class="negative ui button" value="Delete Event">
+	</form>
+	
+</div>
+
+<%- include("partials/footer.ejs") %>

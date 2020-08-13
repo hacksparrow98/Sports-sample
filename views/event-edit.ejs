@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<div class="ui main text container segment">
+	<div class="ui huge header">Edit Event - <%= event.name %></div>
+	<form class="ui form" action="/events/<%= event._id %>?_method=PUT" method="POST">
+		<div class="field">
+			<label>Event name</label>
+			<input type="text" name="event[name]" placeholder="Name" value="<%= event.name %>">
+		</div>
+		<div class="field">
+			<label>Event host</label>
+			<input type="text" name="event[host]" placeholder="Host" value="<%= event.host %>">
+		</div>
+		<div class="field">
+			<label>Event prize money</label>
+			<div class="ui labeled input">
+			  	<label for="amount" class="ui label">&#8377;</label>
+			  	<input type="text" name="event[prize]" placeholder="Prize Money" id="amount" value="<%= event.prize %>">
+			  	<!-- <div class="ui basic label">.00</div> -->
+			</div>
+		</div>
+		<input class="positive ui button" type="submit" name="event-newform-submit" value="Create Event">
+		<br>
+	</form>
+</div>
+
+<%- include("partials/footer.ejs") %>
