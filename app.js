@@ -5,7 +5,7 @@ var bodyParser = require("body-parser"),
 	app = express();
 
 //	APP CONFIG
-mongoose.connect("mongodb://localhost:27017/sportsVie", {useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false } );
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/sportsVie", {useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false } );
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
