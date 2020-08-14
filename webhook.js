@@ -4,6 +4,7 @@ const repo = "/";
 const http = require('http');
 const crypto = require('crypto');
 const exec = require('child_process').exec;
+console.log("server strted!!");
 
 http.createServer(function (req, res) {
     req.on('data', function(chunk) {
