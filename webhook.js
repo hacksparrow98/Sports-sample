@@ -1,10 +1,11 @@
 const secret = "bite me";
-const repo = "/";
+const repo = "app/";
 
 const http = require('http');
 const crypto = require('crypto');
 const exec = require('child_process').exec;
 console.log("server strted!!");
+console.log(__dirname);
 
 http.createServer(function (req, res) {
     req.on('data', function(chunk) {
