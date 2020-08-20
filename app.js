@@ -111,5 +111,5 @@ app.delete("/events/:id", function(req, res){
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log("Server Has Started!");
-	console.log("Server webhook");
+	console.log("Github webhook");
 });
