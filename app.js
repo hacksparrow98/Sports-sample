@@ -107,7 +107,9 @@ app.delete("/events/:id", function(req, res){
 
 // console.log("Server is running a");
 
+
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log("Server Has Started!");
+	console.log("Server implementing webhook");
 });
